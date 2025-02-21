@@ -32,13 +32,13 @@ These two functions are mandatory. Choose the type of asset they are and the sub
 * <p style="color:green">Automated tags</p>
 For better results, I recommend naming correctly the groups and meshes in your outliner with the name of the tags you wish to apply for the automated tags tool.
 
-* * Full hierarchy: Writes the name of your selected meshes as well as all of the groups they are stored under
+ * Full hierarchy: Writes the name of your selected meshes as well as all of the groups they are stored under
 
-* * Group hierarchy: Writes the name of all of the groups your selected meshes are stored under
+ * Group hierarchy: Writes the name of all of the groups your selected meshes are stored under
 
-* * Object name:  Writes only the name of your selected meshes
+ * Object name:  Writes only the name of your selected meshes
 
-* * None: No automated tags are applied
+ * None: No automated tags are applied
 
 
 * <p style="color:blue">Additional tags</p>
