@@ -1,0 +1,13 @@
+/*Sets the styles for various UI components.*/
+
+QLabel.titleLabel {                            
+    background-color: DimGray;
+    padding: 5px;
+    color: LightGray;
+    font-weight: bold;
+}
+
+QPushButton#apply_btn {
+    color: LightGray;
+    font-weight: bold;
+}
