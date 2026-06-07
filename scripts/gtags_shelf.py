@@ -18,7 +18,7 @@ def add_shelf_button():
     # Add the shelf button to the "Custom" shelf
     cmds.shelfButton(
         label="GTags",
-        command="import GTagsV2.gtags_plugin; GTagsV2.gtags_plugin.run()",
+        command="import GTags.gtags_plugin; GTags.gtags_plugin.run()",
         image=icon_path,
         annotation="Launch GTags Tool",
         parent=shelf  # Explicitly set the parent to the "Custom" shelf
