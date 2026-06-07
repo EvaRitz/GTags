@@ -9,7 +9,7 @@ if maya_version >= 20250000:
     from PySide6.QtWidgets import (
     QWidget, QDialog, QPushButton, QHBoxLayout, QVBoxLayout, QLabel, QLineEdit, QFrame, 
     QRadioButton, QButtonGroup, QSizePolicy
-)
+    )
     from PySide6.QtGui import QIcon
     from PySide6.QtCore import Qt
     import shiboken6 as shiboken # To wrap Maya's Qt widgets into PySide6
