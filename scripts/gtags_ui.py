@@ -12,6 +12,7 @@ if maya_version >= 20250000:
 )
     from PySide6.QtGui import QIcon
     from PySide6.QtCore import Qt
+    import shiboken6 as shiboken # To wrap Maya's Qt widgets into PySide6
 else:
     from PySide2.QtWidgets import (
         QWidget, QDialog, QPushButton, QHBoxLayout, QVBoxLayout, QLabel, QLineEdit, QFrame, 
@@ -19,7 +20,7 @@ else:
     )
     from PySide2.QtGui import QIcon
     from PySide2.QtCore import Qt
-    import shiboken2  # To wrap Maya's Qt widgets into PySide2
+    import shiboken2 as shiboken # To wrap Maya's Qt widgets into PySide2
 
 import os
 import GTags.scripts.gtags_logic as logic  # Import the logic module
@@ -27,7 +28,7 @@ import GTags.scripts.gtags_logic as logic  # Import the logic module
 def maya_main_window():
     """Get Maya's main window as a QWidget."""
     main_window_ptr = omui.MQtUtil.mainWindow()
-    return shiboken2.wrapInstance(int(main_window_ptr), QDialog)
+    return shiboken.wrapInstance(int(main_window_ptr), QDialog)
 
 def get_abspath(relative_path):
     """Returns the absolute path of a file inside GTagsV2."""
@@ -245,6 +246,6 @@ def run():
     try:
         gtags_window.close()
         gtags_window.deleteLater()
-    except:
+    except RuntimeError:
         pass
     gtags_window = GTagsTool()
