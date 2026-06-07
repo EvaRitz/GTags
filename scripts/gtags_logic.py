@@ -1,6 +1,13 @@
 import maya.cmds as cmds
 import maya.OpenMaya as om
-from PySide2.QtWidgets import QMessageBox  # Import QMessageBox from PySide2
+
+# Maya version specific imports
+maya_version = int(cmds.about(apiVersion=True))
+
+if maya_version >= 20250000:
+    from PySide6.QtWidgets import QMessageBox  # Import QMessageBox from PySide6
+else:
+    from PySide2.QtWidgets import QMessageBox  # Import QMessageBox from PySide2
 
 def create_g_tags(type_group, sdiv_group, add_edit, auto_group):
     """Creates the GuerillaTags for selected objects."""

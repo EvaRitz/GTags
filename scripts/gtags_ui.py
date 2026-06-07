@@ -1,13 +1,26 @@
 import maya.cmds as cmds
-from PySide2.QtWidgets import (
+import maya.OpenMayaUI as omui
+import maya.OpenMaya as om
+
+# Maya version specific imports
+maya_version = int(cmds.about(apiVersion=True))
+
+if maya_version >= 20250000:
+    from PySide6.QtWidgets import (
     QWidget, QDialog, QPushButton, QHBoxLayout, QVBoxLayout, QLabel, QLineEdit, QFrame, 
     QRadioButton, QButtonGroup, QSizePolicy
 )
-from PySide2.QtGui import QIcon
-from PySide2.QtCore import Qt
-import shiboken2  # To wrap Maya's Qt widgets into PySide2
-import maya.OpenMayaUI as omui
-import maya.OpenMaya as om
+    from PySide6.QtGui import QIcon
+    from PySide6.QtCore import Qt
+else:
+    from PySide2.QtWidgets import (
+        QWidget, QDialog, QPushButton, QHBoxLayout, QVBoxLayout, QLabel, QLineEdit, QFrame, 
+        QRadioButton, QButtonGroup, QSizePolicy
+    )
+    from PySide2.QtGui import QIcon
+    from PySide2.QtCore import Qt
+    import shiboken2  # To wrap Maya's Qt widgets into PySide2
+
 import os
 import GTags.scripts.gtags_logic as logic  # Import the logic module
 
