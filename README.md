@@ -2,10 +2,6 @@
 
 GTags is a tool to add Guerilla Tags to your meshes and is designed to be as fast and practical as possible. It is advised to correctly rename your outliner for better results.
 
-## Maya Version
-
-GTags was designed on Maya 2024. If your version is 2025 or more, this plugin won't be supported.
-
 ## Installation 
 
 * Download this repository into your maya scripts folder under your maya home folder, usually at "C:\Users\YourUserName\Documents\maya\scripts" 
@@ -51,6 +47,3 @@ GTags also has a security where if it detects that your meshes already have Guer
 
 GTags is available under the MIT License. You can use it for commercial or non-commercial projects. Be sure to credit me in the project and documentation.
 
-## Project status
-
-Update from Pyside2 to Pyside6 for Maya versions 2025 and after.
